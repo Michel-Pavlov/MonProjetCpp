@@ -18,12 +18,19 @@ Modele::Modele(const char*n, int p,Moteur m,float px)
 {
   cout <<"--------Constructeur d'initialisation-----------" << endl;
   nom = NULL;
-  cout <<"Test";
   setNom(n);
-  cout << "TEST2";
   setPuissance(p);
   setMoteur(m);
   setPrixDeBase(px);
+}
+Modele::Modele(const Modele &mod)
+{
+  cout << "-------------Constructeur de copie------------------"<< endl;
+  nom = new char[strlen(mod.nom)+1];
+  strcpy(nom,mod.nom);
+  puissance = mod.puissance;
+  moteur = mod.moteur;
+  prixDeBase = mod.prixDeBase;
 }
 //--------------DESTRUCTEUR----------------------
 Modele::~Modele()
@@ -35,7 +42,7 @@ void Modele::setNom(const char* n)
 {
   if(n==NULL) return;
   if (nom) delete nom;
-  nom = new char[strlen(nom)+1];
+  nom = new char[strlen(n)+1];
   strcpy(nom,n);
 }
 void Modele::setPuissance(int p)

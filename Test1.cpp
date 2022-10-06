@@ -44,7 +44,7 @@ int main()
     Modele modele("308 Allure 1.6 Hybrid 5P",150,Hybride,38650.0f);
     modele.Affiche();
   }
-/*
+
   cout << endl << "(4) ***** Test du constructeur de copie *********************************" << endl;
   {
     Modele modele1("2008 GT 1.2 PureTech 130 Man.6",130,Essence,31400.0f);
@@ -86,7 +86,7 @@ int main()
     cout << "modele1 (APRES) :" << endl;
     modele1.Affiche();
   }
-*/
+
   return 0;
 }
 

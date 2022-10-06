@@ -20,7 +20,7 @@ class Modele
  
   Modele(void);
   Modele(const char*n, int p,Moteur m,float px);
-  Modele(const Modele &m);
+  Modele(const Modele &mod);
   ~Modele();
 
   void setNom(const char* n);
